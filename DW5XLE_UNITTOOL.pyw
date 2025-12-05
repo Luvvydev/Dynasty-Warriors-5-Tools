@@ -165,14 +165,14 @@ class MainEditor(TheCheck):
         path = filedialog.askopenfilename(
             title="Select DW5/DW5XL/DW5E ISO File",
             initialdir=os.getcwd(),
-            filetypes=[("ISO files", "*.iso")]
+            filetypes=[("ISO files", "*.iso"), ("All files", "*.*")]
         )
         if not path:
             self.status_label.config(text="No file selected.", foreground="orange")
             return
         self.dw_iso = path
         self.status_label.config(
-            text=f"Loaded ISO: {os.path.basename(path)}",
+            text=f"Loaded FILE: {os.path.basename(path)}",
             fg="green"
         )
         self._load_unit_data_in_memory()
