@@ -3,6 +3,8 @@ from io import BytesIO
 import tkinter as tk
 from tkinter import ttk, filedialog
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 # Paths/constants
 ICON_DIR = "DW5XLE_Ico_Files"
 BACKUP_DIR = "Backups_For_Mod_Disabling"
@@ -648,3 +650,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
